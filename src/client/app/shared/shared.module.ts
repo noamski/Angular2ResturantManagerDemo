@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { NameListService } from './name-list/name-list.service';
 
 /**
@@ -14,8 +13,8 @@ import { NameListService } from './name-list/name-list.service';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [ToolbarComponent, NavbarComponent, SidebarComponent],
-  exports: [ToolbarComponent, NavbarComponent, SidebarComponent,
+  declarations: [ToolbarComponent, NavbarComponent],
+  exports: [ToolbarComponent, NavbarComponent,
     CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule {
