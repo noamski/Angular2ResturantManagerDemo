@@ -1,18 +1,21 @@
 <md-sidenav-container>
   <md-sidenav #start (open)="closeStartButton.focus()">
-    Start Sidenav.
-    <br>
-    <button md-button #closeStartButton (click)="start.close()">Close</button>
+    <ul>
+      <li>
+        <button md-button #closeStartButton (click)="start.close()">Map</button>
+      </li>
+      <li>
+        <button md-button #closeStartButton (click)="start.close()">Table</button>
+      </li>
+      <li>
+        <button md-button #closeStartButton (click)="start.close()">Workers</button>
+      </li>
+    </ul>
   </md-sidenav>
-  <md-sidenav #end align="end">
-    End Sidenav.
-    <button md-button (click)="end.close()">Close</button>
-  </md-sidenav>
-  <sd-toolbar></sd-toolbar>
-  <sd-navbar></sd-navbar>
-  <router-outlet></router-outlet>
-  <button md-button (click)="start.open()">Open start sidenav</button>
-  <button md-button (click)="end.open()">Open end sidenav</button>
-
+  <div class="content-container">
+    <sd-toolbar></sd-toolbar>
+    <sd-navbar></sd-navbar>
+    <router-outlet></router-outlet>
+    <button md-button (click)="start.open()">Open start sidenav</button>
+  </div>
 </md-sidenav-container>
-
