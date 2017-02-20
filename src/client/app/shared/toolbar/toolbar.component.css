@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 :host {
   background-color: #3c3f41;
   color: #5accee;
@@ -11,4 +13,9 @@ h1 {
   font-size: 20px;
   font-weight: normal;
   line-height: 48px;
+}
+
+button {
+  background-color: #3c3f41;
+  color: #ffffff;
 }
