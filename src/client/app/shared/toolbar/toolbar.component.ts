@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+
+import { ToolbarSidebarService } from '../toolbar-sidebar-service/toolbar.sidebar.service';
 
 /**
  * This class represents the toolbar component.
@@ -9,5 +11,12 @@ import { Component } from '@angular/core';
   templateUrl: 'toolbar.component.html',
   styleUrls: ['toolbar.component.css']
 })
-export class ToolbarComponent { }
+export class ToolbarComponent {
+  constructor(private  toolbarSidebarService: ToolbarSidebarService ) {
+  }
+
+  public toggleSidebar() {
+    this.toolbarSidebarService.notifyOther({option: 'toggle'});
+  }
+}
 
